@@ -141,7 +141,7 @@ class APNService(BaseService):
                         raise e  # Unexpected exception, raise it.
                     self._disconnect()
                     i = chunk.index(device)
-                    self.set_devices_last_notified_at(chunk[:i])
+                    # self.set_devices_last_notified_at(chunk[:i])
                     # Start again from the next device.
                     # We start from the next device since
                     # if the device no longer accepts push notifications from your app
@@ -151,7 +151,7 @@ class APNService(BaseService):
 
             self._disconnect()
 
-            self.set_devices_last_notified_at(chunk)
+            # self.set_devices_last_notified_at(chunk)
 
         if notification.pk or notification.persist:
             notification.last_sent_at = dt_now()
