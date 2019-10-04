@@ -259,7 +259,7 @@ class Notification(models.Model):
 
         returns bool
         """
-        return len(self.payload) <= 256
+        return len(self.payload) <= 2048
 
     @property
     def payload(self):
