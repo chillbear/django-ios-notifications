@@ -170,7 +170,7 @@ class APNService(BaseService):
         """
         Converts a notification payload into binary form.
         """
-        if len(payload) > 256:
+        if len(payload) > 2048:
             raise NotificationPayloadSizeExceeded
         if not isinstance(device, Device):
             raise TypeError('device must be an instance of ios_notifications.models.Device')

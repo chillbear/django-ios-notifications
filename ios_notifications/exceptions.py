@@ -1,5 +1,5 @@
 class NotificationPayloadSizeExceeded(Exception):
-    def __init__(self, message='The notification maximum payload size of 256 bytes was exceeded'):
+    def __init__(self, message='The notification maximum payload size of 2048 bytes was exceeded'):
         super(NotificationPayloadSizeExceeded, self).__init__(message)
 
 
